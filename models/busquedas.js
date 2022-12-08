@@ -4,7 +4,7 @@ import axios from "axios";
 
 //Esta clase es la encargada de realizar las busquedas
 class Busquedas {
-    historial = ['Tegucigalpa', 'Madrid', 'San Jose'];
+    historial = [''];
     dbPath = './db/database.json'
     constructor(){
         //TODO: LeerDB si existe
@@ -103,7 +103,7 @@ class Busquedas {
         }
 
         this.historial = this.historial.splice(0,5);
-        
+
         //grabar historial
         this.historial.unshift( lugar.toLocaleLowerCase() );
         
@@ -125,13 +125,16 @@ class Busquedas {
 
      leerDB(){
         //La bd debe de existir
-        if(fs.existsSync(!this.dbPath)) return;
+        if(fs.existsSync(!this.dbPath)) {
+            return
+        }else{
+            //Obteniendo la informacion del archivo .json
+            const info = fs.readFileSync(this.dbPath, {encoding: 'utf-8'});
+            const data = JSON.parse(info);
+            
+            this.historial = data.historial
+        }
 
-        //Obteniendo la informacion del archivo .json
-        const info = fs.readFileSync(this.dbPath, {encoding: 'utf-8'});
-        const data = JSON.parse(info);
-
-        this.historial = data.historial
      }
 
 }
