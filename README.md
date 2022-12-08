@@ -16,4 +16,4 @@ A weather app where you can search for a city and see the weather at that moment
 ## 💥 Features 
                 
 + Search a city and see the weather ⛅
-+ Search history
++ Search history 📚
