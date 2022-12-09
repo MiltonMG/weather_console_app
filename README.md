@@ -5,6 +5,8 @@ A weather app where you can search for a city and see the weather at that moment
 
 [![version](https://img.shields.io/badge/version-1.0.0-green "version")](https://github.com/MiltonMG/todolist_console_app)
 
+[![captura](https://github.com/MiltonMG/weather_console_app/blob/main/src/Captura.PNG?raw=true?raw=true "captura")](https://github.com/MiltonMG/weather_console_app/blob/main/src/Captura.PNG?raw=true?raw=true "captura")
+
 ## 💥 Usage
 
 1. First you need to do  `npm install` to install all the dependencies.
